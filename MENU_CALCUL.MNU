@@ -1,0 +1,10 @@
+***MENUGROUP=CALCUL_SURFACE
+
+***POP1
+**CALCUL_SURFACE
+ID_CALCUL_SURFACE     [Calcul_surface]
+ID_SDP        [SDP]^C^CSDP_PluginZwcad_v01
+ID_SHO        [SHO]^C^CSHO_PluginZwcad_v01
+ID_TCB        [TCB]^C^CTCB_PluginZwcad_v01 
+ID_SUB        [SUB]^C^CSUB_PluginZwcad_v01 
+ID_CARREZ     [CARREZ]^C^CCARREZ_PluginZwcad_v01
