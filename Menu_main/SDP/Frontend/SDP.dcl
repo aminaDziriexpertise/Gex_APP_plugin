@@ -30,20 +30,7 @@ Justification : dialog
                        
                     : row {
                    // : edit_box {	key = "insert" ;label = "&Insert URL ticket Odoo" : ;	edit_width = 100 ;	edit_limit = 20000 ;		}	 
-                     :column {  
-                          label = "&Destinations";
-                          width = 7;     
-                          : radio_button {key = "1-artisanat"  ; label = "GEX_EDS_sdp_1-artisanat.";}  
-                          : radio_button {key = "1-bureau"  ; label = "GEX_EDS_sdp_1-bureau.";}    
-                          : radio_button {key = "1-commerce" ; label = "GEX_EDS_sdp_1-commerce.";}   
-                          : radio_button {key = "1-entrepot" ; label = "GEX_EDS_sdp_1-entrepot.";}        
-                          : radio_button {key = "1-exploitation"  ; label = "GEX_EDS_sdp_1-exploitation.";}          
-                          : radio_button {key = "1-habitation"  ; label = "GEX_EDS_sdp_1-habitation.";}       
-                          : radio_button {key = "1-hotelier"  ; label = "GEX_EDS_sdp_1-hotelier.";}
-                          : radio_button {key = "1-industrie"  ; label = "GEX_EDS_sdp_1-industrie.";}
-                          : radio_button {key = "1-spic"  ; label = "GEX_EDS_sdp_1-spic.";}  
-          
-                            }
+                    
                             : row {
                               :column {
                          label = "&Odoo";
@@ -53,7 +40,8 @@ Justification : dialog
                          : edit_box {	key = "insert" ;label = "&Insert URL ticket Odoo" : ;	edit_width = 100 ;		}	
                         
                           : button { label = "Insert URL Odoo";key = "insert1"; fixed_height =true;alignment=centered;fixed_width =true;}
-                           : button { label = "Scrapping Odoo";key = "Scrapping"; fixed_height =true;alignment=centered;fixed_width =true;}
+                           //: button { label = "Scrapping Odoo";key = "Scrapping"; fixed_height =true;alignment=centered;fixed_width =true;}
+                          : button { label = "Plot cartouche";key = "plot"; fixed_height =true;alignment=centered;fixed_width =true;}
                       }
                       
                       // : row {
@@ -75,25 +63,39 @@ Justification : dialog
                 }
                   :row{
                         
-                          : boxed_column {  
-                          label = "&Calques";
+                         :column {  
+                          label = "&Destinations";
                           width = 7;     
-                          : toggle {key = "2-tremie"  ; label = "GEX_EDS_sdp_2-tremie.";}  
-                          : toggle {key = "3-h-180"  ; label = "GEX_EDS_sdp_3-h-180.";}    
-                          : toggle {key = "5-pk" ; label = "GEX_EDS_sdp_5-pk.";}   
-                          : toggle {key = "6-combles" ; label = "GEX_EDS_sdp_6-combles.";}        
-                          : toggle {key = "7-lt"  ; label = "GEX_EDS_sdp_7-lt.";}          
-                          : toggle {key = "8-cave"  ; label = "GEX_EDS_sdp_8-cave.";}       
-                          : toggle {key = "teinte_contour"  ; label = "GEX_EDS_sdp_teinte_contour.";}
-                          : toggle {key = "sdp_SDP_su"  ; label = "GEX_EDS_sdp_SDP_su.";}
-                          : toggle {key = "2-tremie_su"  ; label = "GEX_EDS_sdp_2-tremie_su.";}  
-                          : toggle {key = "3-h-180_su"  ; label = "GEX_EDS_sdp_3-h-180_su.";}    
-                          : toggle {key = "5-pk_su" ; label = "GEX_EDS_sdp_5-pk_su.";}          
-                          : toggle {key = "6-combles_su"  ; label = "GEX_EDS_sdp_6-combles_su.";}          
-                          : toggle {key = "7-lt_su"  ; label = "GEX_EDS_sdp_7-lt_su.";}       
-                          : toggle {key = "8-cave_su"  ; label = "GEX_EDS_sdp_8-cave_su.";}
-
+                          : radio_button {key = "1-artisanat"  ; label = "GEX_EDS_sdp_1-artisanat.";}  
+                          : radio_button {key = "1-bureau"  ; label = "GEX_EDS_sdp_1-bureau.";}    
+                          : radio_button {key = "1-commerce" ; label = "GEX_EDS_sdp_1-commerce.";}   
+                          : radio_button {key = "1-entrepot" ; label = "GEX_EDS_sdp_1-entrepot.";}        
+                          : radio_button {key = "1-exploitation"  ; label = "GEX_EDS_sdp_1-exploitation.";}          
+                          : radio_button {key = "1-habitation"  ; label = "GEX_EDS_sdp_1-habitation.";}       
+                          : radio_button {key = "1-hotelier"  ; label = "GEX_EDS_sdp_1-hotelier.";}
+                          : radio_button {key = "1-industrie"  ; label = "GEX_EDS_sdp_1-industrie.";}
+                          : radio_button {key = "1-spic"  ; label = "GEX_EDS_sdp_1-spic.";}  
+          
                             }
+                        //  : boxed_column {  
+                          //label = "&Calques";
+                          //width = 7;     
+                          //: toggle {key = "2-tremie"  ; label = "GEX_EDS_sdp_2-tremie.";}  
+                         // : toggle {key = "3-h-180"  ; label = "GEX_EDS_sdp_3-h-180.";}    
+                          //: toggle {key = "5-pk" ; label = "GEX_EDS_sdp_5-pk.";}   
+                         // : toggle {key = "6-combles" ; label = "GEX_EDS_sdp_6-combles.";}        
+                         // : toggle {key = "7-lt"  ; label = "GEX_EDS_sdp_7-lt.";}          
+                         // : toggle {key = "8-cave"  ; label = "GEX_EDS_sdp_8-cave.";}       
+                         // : toggle {key = "teinte_contour"  ; label = "GEX_EDS_sdp_teinte_contour.";}
+                         // : toggle {key = "sdp_SDP_su"  ; label = "GEX_EDS_sdp_SDP_su.";}
+                         // : toggle {key = "2-tremie_su"  ; label = "GEX_EDS_sdp_2-tremie_su.";}  
+                         // : toggle {key = "3-h-180_su"  ; label = "GEX_EDS_sdp_3-h-180_su.";}    
+                         // : toggle {key = "5-pk_su" ; label = "GEX_EDS_sdp_5-pk_su.";}          
+                         // : toggle {key = "6-combles_su"  ; label = "GEX_EDS_sdp_6-combles_su.";}          
+                         // : toggle {key = "7-lt_su"  ; label = "GEX_EDS_sdp_7-lt_su.";}       
+                         // : toggle {key = "8-cave_su"  ; label = "GEX_EDS_sdp_8-cave_su.";}
+
+                          //  }
           
                           : row {
                               label = "&Options";
@@ -121,12 +123,12 @@ Justification : dialog
                           : column {
                               label = "&Actions";
                               width = 17;
-                                : button {label = "Charger le plan" ; key = "next";fixed_width=true;is_cancel=true;width=18;}
+                               // : button {label = "Charger le plan" ; key = "next";fixed_width=true;is_cancel=true;width=18;}
                                 //: button {label = "Extract";key ="extract";fixed_width=true;is_cancel=true;width=18;fixed_width=true;}  
-                                : button { label = "SDP";key = "SDP";fixed_width=true;is_cancel=true;width=18;}
-                                : button { label = "SDT";key = "SDT";fixed_width=true;is_cancel=true;width=18;}
-                                : button { label = "SD0";key = "SD0";fixed_width=true;is_cancel=true;width=18;}
-                                : button {label = "Export";key = "export";fixed_width=true;is_cancel=true;width=18;fixed_width=true;} 
+                                : button { label = "SDP";key = "SDP";fixed_width=true;is_cancel=true;width=18;alignment =centered;}
+                                : button { label = "SDT";key = "SDT";fixed_width=true;is_cancel=true;width=18;alignment =centered;}
+                                : button { label = "SD0";key = "SD0";fixed_width=true;is_cancel=true;width=18;alignment =centered;}
+                                : button {label = "Export";key = "export";fixed_width=true;is_cancel=true;width=18;fixed_width=true;alignment =centered;} 
                                 
                            
                           }
@@ -139,12 +141,12 @@ Justification : dialog
                   
               
              :row {
-                         ok_cancel;alignment = centered;
-                        //: button {label = "reset";key = "reset";fixed_width=true;} 
-                        : button {label = "help";key = "help";fixed_width=true;} 
+                        ok_button;fixed_width=true;is_cancel=true;alignment = centered;
+                        cancel_button;fixed_width=true;is_cancel=true;alignment = centered;
+                        : button {label = "reset";key = "reset";fixed_width=true;is_cancel=true;alignment = centered;} 
+                        : button {label = "help";key = "help";fixed_width=true;is_cancel=true;alignment = centered;} 
                         
                 }
-               
                 }
               
 
@@ -263,23 +265,88 @@ ok_cancel;
 
 etage : dialog {
 label = "Etages ";
-width = 40;
+width = 140;
 : column {
 : row {
 
 : boxed_column {
 label = "Etages du batiment";
 width = 22;
-: radio_button {key = "Toitures Terrasses"  ; label = "Toitures Terrasses.";}  
-: radio_button {key = "7eme Etage"  ; label = "7eme Etage.";}    
-: radio_button {key = "6eme Etage" ; label = "6eme Etage.";}   
-: radio_button {key = "5eme Etage" ; label = "5eme Etage.";}        
-: radio_button {key = "4eme Etage"  ; label = "4eme Etage.";}          
-: radio_button {key = "3eme Etage"  ; label = "3eme Etage.";}       
-: radio_button {key = "2eme Etage"  ; label = "2eme Etage.";}
-: radio_button {key = "1er Etage"  ; label = "1er Etage.";}
-: radio_button {key = "Rez de Chaussee"  ; label = "Rez de Chaussee.";}  
-: radio_button {key = "1er Sous/Sol"  ; label = "1er Sous/Sol.";}
+  : radio_button {key = "Mezzanine4"  ; label = "Mezzanine 4.";}
+  : radio_button {key = "Mezzanine5"  ; label = "Mezzanine 5.";}
+  : radio_button {key = "Entresol"  ; label = "Entresol.";}
+  : radio_button {key = "Entresol1"  ; label = "Entresol 1.";}
+  : radio_button {key = "Entresol2"  ; label = "Entresol 2.";}
+  : radio_button {key = "Entresol3"  ; label = "Entresol 3.";}
+  : radio_button {key = "Entresol4"  ; label = "Entresol 4.";}
+  : radio_button {key = "Entresol5"  ; label = "Entresol 5.";}
+  : radio_button {key = "Rezdedalle"  ; label = "Rez de dalle.";}
+  : radio_button {key = "Rezdejardin"  ; label = "Rez de jardin.";}
+  : radio_button {key = "Rezdequai"  ; label = "Rez de quai.";}
+  : radio_button {key = "Rezdechausséehaut"  ; label = "Rez de chaussee haut.";}
+  : radio_button {key = "Rezdechausséebas"  ; label = "Rezdechaussee bas.";}
+  : radio_button {key = "Rez de Chaussee"  ; label = "Rez de Chaussee.";}  
+  : radio_button {key = "1er Sous/Sol"  ; label = "1er Sous/Sol.";}
+  : radio_button {key = "2eme Sous/Sol"  ; label = "2eme Sous/Sol.";}
+  : radio_button {key = "3eme Sous/Sol"  ; label = "3eme Sous/Sol.";}
+  : radio_button {key = "4eme Sous/Sol"  ; label = "4eme Sous/Sol.";}
+  : radio_button {key = "5eme Sous/Sol"  ; label = "5eme Sous/Sol.";}
+  : radio_button {key = "6eme Sous/Sol"  ; label = "6eme Sous/Sol.";}
+
+
+}
+
+: boxed_column {
+label = "";
+width = 22;
+  : radio_button {key = "Toitures Terrasses"  ; label = "Toitures Terrasses.";} 
+  : radio_button {key = "Combles"  ; label = "Combles.";} 
+  : radio_button {key = "Combles1"  ; label = "Combles 1.";} 
+  : radio_button {key = "Combles2"  ; label = "Combles 2.";} 
+  : radio_button {key = "Combles3"  ; label = "Combles 3.";} 
+  : radio_button {key = "Combles4"  ; label = "Combles 4.";} 
+  : radio_button {key = "Combles5"  ; label = "Combles 5.";} 
+  : radio_button {key = "10eme Etage"  ; label = "10eme Etage.";}    
+  : radio_button {key = "9eme Etage"  ; label = "9eme Etage.";}    
+  : radio_button {key = "8eme Etage"  ; label = "8eme Etage.";}     
+  : radio_button {key = "7eme Etage"  ; label = "7eme Etage.";}    
+  : radio_button {key = "6eme Etage" ; label = "6eme Etage.";}   
+  : radio_button {key = "5eme Etage" ; label = "5eme Etage.";}        
+  : radio_button {key = "4eme Etage"  ; label = "4eme Etage.";}          
+  : radio_button {key = "3eme Etage"  ; label = "3eme Etage.";}       
+  : radio_button {key = "2eme Etage"  ; label = "2eme Etage.";}
+  : radio_button {key = "1er Etage"  ; label = "1er Etage.";}
+  : radio_button {key = "Mezzanine1"  ; label = "Mezzanine 1.";}
+  : radio_button {key = "Mezzanine2"  ; label = "Mezzanine 2.";}
+  : radio_button {key = "Mezzanine3"  ; label = "Mezzanine 3.";}
+  
+
+}
+
+
+
+
+}
+ok_cancel;
+}
+}
+
+
+plot : dialog {
+label = "Remplissage de la cartouche SDP ";
+width = 40;
+: column {
+: row {
+
+: boxed_column {
+label = "Cartouche SDP";
+width = 22;
+: radio_button {key = "commune"  ; label = "Commune .";}  
+: radio_button {key = "city"  ; label = "City.";}    
+: radio_button {key = "adress" ; label = "Adress.";}   
+: radio_button {key = "cadastre" ; label = "Cadastre.";}        
+: radio_button {key = "Mission"  ; label = "Mission.";}          
+: radio_button {key = "nota"  ; label = "Nota.";}       
 
 }
 
